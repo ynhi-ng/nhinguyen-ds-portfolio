@@ -16,3 +16,9 @@ Working with Python, R, and data visualisation.
 - Tools : RShiny 
 - [View project](https://github.com/ynhi-ng/data-analysis-projects/tree/main/broadway_data)
 
+
+#### E-Commerce Sales Report
+- Description : Customer segmentation (K-means) and a product recommender (TF-IDF + cosine similarity) for a UK online retailer's transaction data, published as an interactive report
+- Tools : Python, scikit-learn, pandas, Chart.js
+- [View project](https://github.com/ynhi-ng/data-analysis-projects/tree/main/ecommerce)
+
