@@ -11,23 +11,15 @@ excerpt: "Mining patterns, building dashboards, and writing short takes on data 
 
 <p class="archive__subtitle">Featured projects</p>
 
-<ul class="taxonomy__index featured-projects">
+<ul class="taxonomy__index">
   {% for project in projects limit:6 %}
-    <li class="featured-projects__item">
-      {% if project.visual_image %}
-        <a class="featured-projects__thumb" href="{{ project.url | relative_url }}">
-          <img src="{{ project.visual_image | relative_url }}" alt="">
-        </a>
-      {% endif %}
-      <div class="featured-projects__text">
-        <a href="{{ project.url | relative_url }}">
-          <strong>{{ project.title }}</strong>
-          {% if project.status %}
-            <span class="taxonomy__count">{{ project.status }}</span>
-          {% endif %}
-        </a>
-        {% if project.excerpt %}<br>{{ project.excerpt | markdownify | strip_html | truncate: 140 }}{% endif %}
-      </div>
+    <li>
+      <a href="{{ project.url | relative_url }}">
+        <strong>{{ project.title }}</strong>
+        {% if project.status %}
+          <span class="taxonomy__count">{{ project.status }}</span>
+        {% endif %}
+      </a>
     </li>
   {% endfor %}
 </ul>
