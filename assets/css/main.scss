@@ -1,0 +1,57 @@
+---
+# Only the main Sass file needs front matter
+---
+
+@charset "utf-8";
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* Project pages: hide social share (belt-and-suspenders with share: false) */
+.page__share {
+  display: none !important;
+}
+
+/* Smaller previous / next pager on project (and other) pages */
+.pagination--pager {
+  font-size: 0.75rem;
+  padding: 0.35em 0.75em;
+  min-height: auto;
+  line-height: 1.3;
+}
+
+.pagination--pager span {
+  font-size: 0.65rem;
+}
+
+/* Soften home section labels (not ## headings) */
+.page__content .archive__subtitle {
+  margin: 1.5rem 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #394e63;
+}
+
+/* Final visual block on project pages */
+.project-visual {
+  margin: 1.25rem 0 1.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.project-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.project-visual__caption {
+  padding: 0.65rem 0.9rem;
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin: 0;
+}

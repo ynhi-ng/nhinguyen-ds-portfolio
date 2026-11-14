@@ -1,17 +1,29 @@
 ---
 title: "LearnPlatform — Digital Learning EDA"
-excerpt: "2020 K–12 digital engagement around COVID — products, locales, and equity gaps. HTML report planned."
+excerpt: "2020 K–12 digital engagement around COVID — products, locales, and equity gaps, with an HTML findings report."
 date: 2025-09-01
 status: complete
 category: eda
 tools: "Python, Jupyter, pandas"
 repo_url: "https://github.com/ynhi-ng/data-mining-projects/tree/main/learnplatform_data"
 demo_url: "https://github.com/ynhi-ng/data-mining-projects/tree/main/learnplatform_data"
+visual_image: "/assets/images/projects/learnplatform.png"
 ---
 
 **Status:** Complete · **Tools:** {{ page.tools }}
 
-[View code]({{ page.repo_url }}) · [Findings report (`index.html`)]({{ page.demo_url }})
+[View code]({{ page.repo_url }}) · [Findings report]({{ page.demo_url }})
+
+## Final visual
+
+{% if page.visual_image %}
+<figure class="project-visual">
+  <img src="{{ page.visual_image | relative_url }}" alt="LearnPlatform findings report">
+  <figcaption class="project-visual__caption">HTML findings report — timing, products, and equity signals (<code>learnplatform_data/index.html</code>).</figcaption>
+</figure>
+{% else %}
+<p>Findings report: <code>learnplatform_data/index.html</code>.</p>
+{% endif %}
 
 ## Problem & context
 
@@ -20,13 +32,11 @@ products led, and how does engagement relate to district demographics?
 
 ## Data & methodology
 
-- Merge district engagement files; join product and district metadata
-- Weekday vs weekend patterns; pre- vs post-outbreak engagement
-- Product leaders (e.g. Google Docs / Classroom); correlations with Black/Hispanic
-  share and free/reduced lunch
+- LearnPlatform / Kaggle digital-learning challenge data (kept local; see README)
+- Weekday vs weekend; pre- vs post-outbreak; product leaders; demographic correlations
 - HTML findings report summarizing notebook conclusions
 
 ## Limits & next steps
 
 - Observational district aggregates; correlations ≠ causation
-- Next: export chart aggregates from the notebook into interactive report panels
+- Next: export more chart aggregates into interactive report panels

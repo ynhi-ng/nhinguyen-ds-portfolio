@@ -1,22 +1,15 @@
 ---
 layout: splash
-title: "Nhi Nguyen"
+title: "Data science & analytics"
 permalink: /
 header:
   overlay_color: "#1a2332"
-  actions:
-    - label: "Projects"
-      url: "/projects/"
-    - label: "Posts"
-      url: "/posts/"
-    - label: "About"
-      url: "/about/"
-excerpt: "Data science & analytics — mining patterns, building dashboards, and writing short takes on data in the news."
+excerpt: "Mining patterns, building dashboards, and writing short takes on data in the news."
 ---
 
 {% assign projects = site.projects | sort: "date" | reverse %}
 
-## Featured projects
+<p class="archive__subtitle">Featured projects</p>
 
 <ul class="taxonomy__index">
   {% for project in projects limit:6 %}
@@ -34,7 +27,7 @@ excerpt: "Data science & analytics — mining patterns, building dashboards, and
 
 <p><a href="{{ '/projects/' | relative_url }}" class="btn btn--primary">All projects</a></p>
 
-## Latest posts
+<p class="archive__subtitle">Latest posts</p>
 
 {% for post in site.posts limit:3 %}
   <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>

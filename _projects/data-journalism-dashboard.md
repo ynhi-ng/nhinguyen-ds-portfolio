@@ -6,11 +6,23 @@ status: complete
 category: dashboard
 tools: "R, Shiny, plotly, DT"
 repo_url: "https://github.com/ynhi-ng/data-mining-projects/tree/main/data_journalism_dashboard"
+# visual_image: /assets/images/projects/data-journalism.png
 ---
 
 **Status:** Complete · **Tools:** {{ page.tools }}
 
 [View code]({{ page.repo_url }})
+
+## Final visual
+
+{% if page.visual_image %}
+<figure class="project-visual">
+  <img src="{{ page.visual_image | relative_url }}" alt="Data journalism dashboard">
+  <figcaption class="project-visual__caption">Shiny dashboard — GenAI theme volume, growth, and correlations.</figcaption>
+</figure>
+{% else %}
+<p>Final product: Shiny app (<code>dashboard.R</code>). Add a screenshot to <code>assets/images/projects/data-journalism.png</code>.</p>
+{% endif %}
 
 ## Problem & context
 
@@ -20,8 +32,7 @@ rerunning an NLP pipeline?
 
 ## Data & methodology
 
-- Pre-aggregated CSV layers (monthly volume, indexed growth, theme shares,
-  Jaccard similarity, rolling Pearson correlations, event response)
+- Pre-aggregated chart CSVs kept local (not in git; see README)
 - Shiny dashboard (`dashboard.R`) for interactive charts and tables
 
 ## Limits & next steps
