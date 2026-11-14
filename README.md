@@ -1,24 +1,21 @@
-### Nhi Nguyen — Data Science Portfolio
+# Nhi Nguyen — Data Science Portfolio
 
-### About Me
-Working with Python, R, and data visualisation.
+GitHub Pages site: [ynhi-ng.github.io/nhinguyen-ds-portfolio](https://ynhi-ng.github.io/nhinguyen-ds-portfolio/)
 
-### Projects
+Built with [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) (Jekyll).
+Project code: [ynhi-ng/data-mining-projects](https://github.com/ynhi-ng/data-mining-projects).
 
-#### World Development Indicators — EDA
-- Description: Exploratory data analysis of world development indicators examining trends across countries and regions
-- Tools: R Markdown, ggplot2
-- [View project](https://github.com/ynhi-ng/data-analysis-projects/tree/main/world_development)
+## Local preview
 
+```bash
+bundle install
+bundle exec jekyll serve
+```
 
-#### Broadway Data - EDA and visualisation
-- Description : Dashboard exploring weekly Broadway box office data (2005–2025)- see which shows are leading, how full houses are running, and how the market has trended over time (including the 2020 COVID-19 collapse and recovery)
-- Tools : RShiny 
-- [View project](https://github.com/ynhi-ng/data-analysis-projects/tree/main/broadway_data)
+Open `http://127.0.0.1:4000/nhinguyen-ds-portfolio/`.
 
+## Content layout
 
-#### E-Commerce Sales Report
-- Description : Customer segmentation (K-means) and a product recommender (TF-IDF + cosine similarity) for a UK online retailer's transaction data, published as an interactive report
-- Tools : Python, scikit-learn, pandas, Chart.js
-- [View project](https://github.com/ynhi-ng/data-analysis-projects/tree/main/ecommerce)
-
+- `_pages/` — About, Projects index, Posts index
+- `_projects/` — one markdown file per portfolio project
+- `_posts/` — news / short analysis posts
