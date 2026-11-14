@@ -1,6 +1,6 @@
 ---
 title: "Student Stress Analysis"
-excerpt: "Survey EDA, group tests, and association rules — plus an interactive stress dashboard."
+excerpt: "Survey EDA plus a peer-recommendation prototype — transparent first-line support with a path to professional help."
 date: 2025-10-15
 status: complete
 category: dashboard
@@ -12,31 +12,33 @@ visual_image: "/assets/images/projects/student-stress.png"
 
 **Status:** Complete · **Tools:** {{ page.tools }}
 
-[View code]({{ page.repo_url }}) · [Dashboard]({{ page.demo_url }})
+[View code]({{ page.repo_url }}) · [Dashboard]({{ page.demo_url }}) · [Recommendation prototype](https://github.com/ynhi-ng/data-mining-projects/blob/main/student_stress/recommend.html)
 
 ## Final visual
 
 {% if page.visual_image %}
 <figure class="project-visual">
-  <img src="{{ page.visual_image | relative_url }}" alt="Student stress dashboard">
-  <figcaption class="project-visual__caption">Interactive dashboard — stress distribution, gender, coping, correlations (<code>student_stress/index.html</code>).</figcaption>
+  <img src="{{ page.visual_image | relative_url }}" alt="Student stress recommendation prototype">
+  <figcaption class="project-visual__caption">Peer recommendation prototype — similar-profile coping cards + professional referral (<code>recommend.html</code>).</figcaption>
 </figure>
 {% else %}
-<p>Dashboard: <code>student_stress/index.html</code> (optional Shiny <code>app.R</code>).</p>
+<p>Prototype: <code>student_stress/recommend.html</code> · exploration dashboard: <code>index.html</code>.</p>
 {% endif %}
 
 ## Problem & context
 
-What factors relate to students' reported mental stress levels, and how do coping
-mechanisms and demographics show up in survey data?
+What factors relate to students' reported mental stress levels, and how can we
+surface transparent, peer-based first-line coping ideas — with a clear path to
+professional help if someone is still struggling?
 
 ## Data & methodology
 
 - Survey tables kept local (see README); companion UK survey analyses
 - EDA, correlations, t-tests / ANOVA, association rules
-- Chart.js dashboard (+ optional Shiny filters)
+- Chart.js exploration dashboard + **recommendation prototype** that ranks
+  Social Support / Physical Activities / Meditation among similar-stress peers
 
 ## Limits & next steps
 
-- Self-reported survey data; associations are not causal
-- Dashboard uses pre-aggregated exports; extend filters as needed
+- Self-reported survey data; rates are descriptive, not causal or clinical advice
+- Prototype uses simple cohort filters; next step could be richer similarity matching

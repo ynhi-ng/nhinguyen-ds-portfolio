@@ -15,8 +15,8 @@ search_full_content: true
 breadcrumbs: true
 
 author:
-  name: "Nhi Nguyen"
-  bio: "Data science · mining · storytelling"
+  name: "Data mining · machine learning · storytelling"
+  bio: ""
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"

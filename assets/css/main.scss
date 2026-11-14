@@ -55,3 +55,53 @@
   color: #4a5568;
   margin: 0;
 }
+
+/* Author sidebar: tagline-as-name should wrap cleanly */
+.author__name {
+  font-size: 0.95rem !important;
+  line-height: 1.35 !important;
+  font-weight: 600 !important;
+}
+
+.author__bio:empty {
+  display: none;
+}
+
+/* Home featured list: compact thumbs; full visuals stay on project sub-pages */
+.featured-projects__item {
+  display: flex;
+  gap: 0.85rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.featured-projects__thumb {
+  flex: 0 0 120px;
+  display: block;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.featured-projects__thumb img {
+  display: block;
+  width: 120px;
+  height: 76px;
+  object-fit: cover;
+}
+
+.featured-projects__text {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 600px) {
+  .featured-projects__thumb {
+    flex-basis: 88px;
+  }
+  .featured-projects__thumb img {
+    width: 88px;
+    height: 56px;
+  }
+}
