@@ -7,10 +7,7 @@ tags:
   - writing
 ---
 
-This section is where I'll collect news items and write short analyses —
-what the data (or the claim) actually shows, what it misses, and what I'd
-check next.
+Short notes on data science concepts, personal experiments, and analytical insights—focusing on evidence, methodological limits, and next steps.
 
-Expect pieces tied to public datasets, media coverage of AI and education,
-and notes from projects on this site. If you're looking for longer technical
-write-ups, start with [Projects]({{ '/projects/' | relative_url }}).
+Expect write-ups on pattern mining, AI applications in education, and takeaways from my project builds. If you're looking for case studies write-ups, start with [Projects]({{ '/projects/' | relative_url }}).
+

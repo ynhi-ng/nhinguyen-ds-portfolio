@@ -4,7 +4,7 @@ title: "About"
 author_profile: true
 ---
 
-I'm **Nhi Nguyen**, and I investigate complex datasets and behavioral logs to uncover hidden patterns that standard observation misses: turning unstructured data into clear visual stories, actionable insights, and reliable models.
+I'm Nhi Nguyen, and I investigate complex datasets and behavioral logs to uncover hidden patterns that standard observation misses: turning unstructured data into clear visual stories, actionable insights, and reliable models.
 
 ## Why data
 
@@ -15,7 +15,7 @@ I view data work much like forensic investigation: uncovering hidden patterns be
 My work focuses primarily on behavioral data, app engagement logs, and text analytics. I bridge exploratory pattern mining, interactive dashboards, and machine learning algorithms to translate complex digital traces into clear, scalable findings for diverse technical and non-technical stakeholders. 
 
 
-## Collaboration & project management
+## Collaboration & Project Management
 
 Technical insights are only valuable if they can be understood and acted upon:
 
@@ -29,8 +29,15 @@ Technical insights are only valuable if they can be understood and acted upon:
 
 - **Languages:** Python, R, SQL
 - **Analysis:** pandas, numpy, scipy.stats, scikit-learn, dplyr, ggplot2
-- **Apps & reports:** Shiny, HTML / CSS / JavaScript, Chart.js
+- **Apps & reports:** RShiny, HTML / CSS / JavaScript 
 - **Workflow:** Jupyter, Git / GitHub
+
+## Currently Learning & Reading
+
+**Current Focus:** Deepening expertise in deep learning architectures and NLP.
+
+**Latest Experiment:** Using text embeddings and similarity thresholds to extract cognitive patterns from unstructured text.
+
 
 ## Find me
 

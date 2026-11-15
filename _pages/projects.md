@@ -6,9 +6,7 @@ classes: wide
 author_profile: true
 ---
 
-Data mining and visualization work. Each page covers **problem & context**,
-**data & methodology**, and **limits & next steps**. Code lives in the
-[data-mining-projects](https://github.com/ynhi-ng/data-mining-projects) repo.
+Hands-on pattern mining, exploratory analysis, and visual dashboards. Every case study details the core problem, methodology & models, and limitations.
 
 {% assign projects = site.projects | sort: "date" | reverse %}
 
