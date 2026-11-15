@@ -4,34 +4,36 @@ title: "About"
 author_profile: true
 ---
 
-I'm **Nhi Nguyen**, and I work with data to turn messy, real-world records into
-clear stories and useful models.
+I'm **Nhi Nguyen**, and I investigate complex datasets and behavioral logs to uncover hidden patterns that standard observation misses: turning unstructured data into clear visual stories, actionable insights, and reliable models.
 
 ## Why data
 
-I care about questions you can answer with evidence: how a market recovered after
-a shock, which customers behave alike, whether engagement gaps show up across
-districts, or what a model can (and cannot) predict from survey and forum text.
-Data work lets me combine curiosity with structure — clean the table, choose a
-method, and show the limits honestly.
+I view data work much like forensic investigation: uncovering hidden patterns beneath complex numbers. Whether analysing user engagement logs, behavioral events, or processing texts, I believe data reveals stories we wouldn't otherwise see. At the same time, I trust human instinct and domain context to guide the investigation. For me, data work is about balancing curiosity with analytical rigor: structuring unstructured information, applying appropriate methodology, and communicating both the insights and the limitations. 
 
 ## Background
 
-My projects span exploratory analysis, interactive dashboards for journalists and
-stakeholders, and supervised learning (classification and prediction). Much of
-the work started in university coursework and personal challenges; I've since
-rewritten public-facing materials to focus on methods and findings rather than
-assignment framing.
+My work focuses primarily on behavioral data, app engagement logs, and text analytics. I bridge exploratory pattern mining, interactive dashboards, and machine learning algorithms to translate complex digital traces into clear, scalable findings for diverse technical and non-technical stakeholders. 
+
+
+## Collaboration & project management
+
+Technical insights are only valuable if they can be understood and acted upon:
+
+**Communication & Storytelling:** Translating technical findings and model outputs into clear, narrative-driven dashboards and reports for diverse audiences.
+
+**End-to-End Project Management:** Scoping projects from raw data collection and cleaning to final deployment, ensuring reproducibility, documentation, and timely delivery.
+
+**Teamwork:** Collaborating closely with research peers and cross-functional partners to refine hypotheses, share analytical workflows, and iterate on design solutions.
 
 ## Tech stack
 
-- **Languages:** Python, R
-- **Analysis:** pandas, scikit-learn, dplyr, ggplot2, R Markdown
+- **Languages:** Python, R, SQL
+- **Analysis:** pandas, numpy, scipy.stats, scikit-learn, dplyr, ggplot2
 - **Apps & reports:** Shiny, HTML / CSS / JavaScript, Chart.js
-- **Workflow:** Jupyter, Git / GitHub, GitHub Pages
+- **Workflow:** Jupyter, Git / GitHub
 
 ## Find me
 
 - [GitHub](https://github.com/ynhi-ng)
 - [Project code](https://github.com/ynhi-ng/data-mining-projects)
-- [This site's source](https://github.com/ynhi-ng/nhinguyen-ds-portfolio)
+- [LinkedIn](https://www.linkedin.com/in/nhinguyen12/)
