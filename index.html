@@ -8,16 +8,18 @@ excerpt: "Extracting patterns from complex data, building interactive dashboards
 ---
 
 {% assign projects = site.projects | sort: "date" | reverse %}
-{% assign eda_projects = projects | where_exp: "p", "p.status == 'complete' and p.category != 'ml'" %}
-{% assign ml_projects = projects | where_exp: "p", "p.status == 'complete' and p.category == 'ml'" %}
-{% assign wip_projects = projects | where_exp: "p", "p.status == 'in-progress'" %}
+{% assign complete_projects = projects | where: "status", "complete" %}
+{% assign ml_projects = complete_projects | where: "category", "ml" %}
+{% assign wip_projects = projects | where: "status", "in-progress" %}
 
 <p class="archive__subtitle">EDA / analysis projects</p>
 <ul class="taxonomy__index">
-  {% for project in eda_projects %}
-    <li>
-      <a href="{{ project.url | relative_url }}"><strong>{{ project.title }}</strong></a>
-    </li>
+  {% for project in complete_projects %}
+    {% unless project.category == "ml" %}
+      <li>
+        <a href="{{ project.url | relative_url }}"><strong>{{ project.title }}</strong></a>
+      </li>
+    {% endunless %}
   {% endfor %}
 </ul>
 
