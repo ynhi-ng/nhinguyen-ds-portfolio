@@ -8,21 +8,40 @@ excerpt: "Extracting patterns from complex data, building interactive dashboards
 ---
 
 {% assign projects = site.projects | sort: "date" | reverse %}
+{% assign eda_projects = projects | where_exp: "p", "p.status == 'complete' and p.category != 'ml'" %}
+{% assign ml_projects = projects | where_exp: "p", "p.status == 'complete' and p.category == 'ml'" %}
+{% assign wip_projects = projects | where_exp: "p", "p.status == 'in-progress'" %}
 
-<p class="archive__subtitle">Featured projects</p>
-
+<p class="archive__subtitle">EDA / analysis projects</p>
 <ul class="taxonomy__index">
-  {% for project in projects limit:6 %}
+  {% for project in eda_projects %}
     <li>
-      <a href="{{ project.url | relative_url }}">
-        <strong>{{ project.title }}</strong>
-        {% if project.status %}
-          <span class="taxonomy__count">{{ project.status }}</span>
-        {% endif %}
-      </a>
+      <a href="{{ project.url | relative_url }}"><strong>{{ project.title }}</strong></a>
     </li>
   {% endfor %}
 </ul>
+
+{% if ml_projects.size > 0 %}
+<p class="archive__subtitle">ML projects</p>
+<ul class="taxonomy__index">
+  {% for project in ml_projects %}
+    <li>
+      <a href="{{ project.url | relative_url }}"><strong>{{ project.title }}</strong></a>
+    </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+{% if wip_projects.size > 0 %}
+<p class="archive__subtitle">In progress projects</p>
+<ul class="taxonomy__index">
+  {% for project in wip_projects %}
+    <li>
+      <a href="{{ project.url | relative_url }}"><strong>{{ project.title }}</strong></a>
+    </li>
+  {% endfor %}
+</ul>
+{% endif %}
 
 <p><a href="{{ '/projects/' | relative_url }}">All projects →</a></p>
 
