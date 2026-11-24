@@ -6,7 +6,7 @@ status: complete
 category: dashboard
 tools: "R, Shiny, plotly, dplyr"
 repo_url: "https://github.com/ynhi-ng/data-mining-projects/tree/main/broadway_data"
-# visual_image: /assets/images/projects/broadway.png
+visual_image: /assets/images/projects/broadway.png
 ---
 
 **Status:** Complete · **Tools:** {{ page.tools }}
@@ -21,7 +21,7 @@ repo_url: "https://github.com/ynhi-ng/data-mining-projects/tree/main/broadway_da
   <figcaption class="project-visual__caption">Shiny dashboard — weekly snapshot, leaderboard, and trend explorer.</figcaption>
 </figure>
 {% else %}
-<p>Final product: Shiny app (<code>broadway_data/app.R</code>). Add a screenshot to <code>assets/images/projects/broadway.png</code>.</p>
+<p>Final product: RShiny app (<code>broadway_data/app.R</code>)</p>
 {% endif %}
 
 ## Problem & context
@@ -32,10 +32,10 @@ especially through the 2020 shutdown and recovery.
 
 ## Data & methodology
 
-- Weekly box office grosses (2005–present), cleaned locally (CSV not in git; see README)
-- Shiny app: current-week snapshot, top-10 charts, leaderboard, trend explorer
+- Weekly box office grosses (2005–present)
+- RShiny app: current-week snapshot, top-10 charts, leaderboard, trend explorer
 
 ## Limits & next steps
 
 - Weekly aggregates only; no ticket-level microdata
-- Local Shiny run today; a hosted demo URL would help sharing
+- Local RShiny run only
