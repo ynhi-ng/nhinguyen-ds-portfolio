@@ -1,6 +1,6 @@
 ---
-title: "Data wrangling before you model"
-excerpt: "Data wrangling is where mnay of an analysis's key decision are made. This post defines it and set out the steps I follow to keep those decisions visible & defensible."
+title: "Data wrangling before modelling"
+excerpt: "Data wrangling is where manay of an analysis's key decision are made. This post defines it and set out the steps I follow to keep those decisions visible & defensible."
 categories:
   - data-wrangling
 tags:
