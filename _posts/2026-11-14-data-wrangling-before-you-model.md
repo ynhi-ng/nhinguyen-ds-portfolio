@@ -1,6 +1,6 @@
 ---
 title: "Data wrangling before you model"
-excerpt: "Most analysis time is spent cleaning and reshaping tables. Here is a practical checklist I use before any dashboard, EDA report, or model."
+excerpt: "Data wrangling is where mnay of an analysis's key decision are made. This post defines it and set out the steps I follow to keep those decisions visible & defensible."
 categories:
   - data-wrangling
 tags:
@@ -10,91 +10,91 @@ tags:
   - methodology
 ---
 
-Before a chart looks convincing — or a model looks “smart” — the table usually
-needs work. Data wrangling is that unglamorous middle: checking what you
-actually received, fixing types and missingness, and shaping rows so the
-question is answerable.
+## Summary
 
-This post is a short field guide from projects on this site (retail
-transactions, survey extracts, API pulls). It is not a library tutorial; it is
-the order I try not to skip.
+Data wrangling is usually described as a preparation that happens before any analysis. It is the stage where decisions that shape the result are made. 
 
-## 1. Name the grain
 
-Ask: **what does one row mean?**
+## 1. Definition 
 
-- One order line? One customer-day? One sensor-hour?
-- If two tables disagree on grain, joins will silently multiply rows.
+Data wrangling is the process of acquiring, cleaning, structuring and
+enriching raw data into a form that can be used directly for analysis [1].
+It is also known as data munging or remediation, and cleaning is only one
+part of it [2]. The course I studied breaks it into eight tasks: discovery,
+collection, pre-processing, cleaning, transformation, enrichment, validation
+and storing [1]. The HBS Online description uses six steps: discovery,
+structuring, cleaning, enriching, validating and publishing [2].
 
-In the e-commerce work, raw rows were invoice lines. Customer segmentation only
-made sense after aggregating to **customer**-level features. In Melbourne
-pedestrian data, the grain is **sensor × hour** — duplicates and missing hours
-only show up once that is explicit.
+The motivation is stated that, analyses are only as reliable as the data behind them [2].
 
-## 2. Validate before you impute
+## 2. Objective 
 
-A useful first pass:
 
-1. Row count, column list, dtypes  
-2. Primary-key uniqueness (or a composite key)  
-3. Missingness by column (and by time, if the data is a panel)  
-4. Impossible values (negative prices, hours outside 0–23, ages < 0)
+| Wrangling decision | How it can affect inference |
+|---|---|
+| Dropping rows with missing values | Can bias the sample if missingness is not random |
+| Imputing values | Can understate variance or hide a data collection fault |
+| Removing outliers | Can delete a real effect, or keep an error that skew data distribution |
+| Choosing the unit of a row | Changes what the model is actually predicting |
+| Joining sources | Can duplicate or lose records and change group sizes |
 
-Only then decide what to drop, flag, or fill. Filling first often hides the bug.
+There are also some practical obstacles: large volume, quality issues,
+diverse sources, complex structures, a lack of standardisation, time cost,
+and privacy and security [1]. These are the conditions under which
+undocumented decisions pile up.
 
-## 3. Separate “broken” from “sparse”
+## 3. The protocol 
 
-Missing is not always the same problem:
+I organise the work around the question first, then apply the following steps:
 
-- **Broken:** field should exist (e.g. closed Broadway weeks with junk prices) →
-  correct or exclude with a rule you can defend  
-- **Sparse:** true absence (a student skipped an optional item) → keep as its
-  own signal or model missingness explicitly
+1. **State the question and the unit of analysis.** Note down what each row represents,
+  before touching the data. This is the discovery stage, where the data's suitability and quality are assessed [1].
+2. **Record provenance.** Note the data source, access date and any licence or
+   permission constraints. For example, listing ethics and privacy[1].
+3. **Profile before changing anything.** Row counts, types, key uniqueness,
+   missingness and impossible values. I use the validation categories: accuracy, consistency, completeness, range, format, uniqueness[1].
+4. **Pre-specify cleaning rules.** Decide what counts as an error versus a
+   rare value, and write down the rule before seeing its effect on the
+   result.
+5. **Transform and enrich with the question in mind.** Normalise, aggregate
+   or bin only where the method needs it [1]; join other sources only where
+   they add information the question requires [1][2].
+6. **Validate the output.** Re-run the checks on the final table and compare
+   against the raw data.
+7. **Store and document process.** Save the result in a suitable
+   format and make it available with its metadata [1][2].
 
-Write the rule in the README. Future you will thank present you.
+## 4. Documentation and reproducibility
 
-## 4. Reshape to the question
+A wrangling decision is only defensible if someone else can see it: keeping track of validation issues and how they were resolved as part of validation [1]. In practice, I keep a short log in the repository or write down step by step process:
 
-Wrangling is often a reshape, not a formula:
+1. Before each cleaning step, count the rows and affected values.
+2. Apply the rule.
+3. Count again, and record the rule, the counts and the reason.
 
-- Long → wide (or the reverse) for the chart you need  
-- Window features (recency, rolling means) for behavior  
-- Train / validation / test **splits after** cleaning, with the same recipes
-  applied to each fold
 
-For ML pieces under [ML Algorithm Projects]({{ '/projects/ml-algorithm-projects/' | relative_url }}),
-feature tables and labels had to align on `Unique_ID` before any classifier
-mattered. The join *is* the wrangling.
+## 5. Threats to validity
 
-## 5. Leave a breadcrumb trail
+Questions I ask before trusting a cleaned dataset: 
 
-For portfolio and collaboration:
+- **Selection:** did cleaning remove a non-random group of records?
+- **Measurement:** were units, formats and encodings same across sources?
+- **Leakage:** were any values learned from the full dataset before
+  splitting? Steps that learn from data, such as imputation values or
+  scaling, should be fitted on training data only.
+- **Sensitivity:** do the main findings return the same result if I change a cleaning rule?
 
-- Keep raw files local (or cited); commit code that reproduces the clean table  
-- Export only the aggregates a report needs (`data.js`, chart CSVs)  
-- Note source + access date in the project README
 
-That habit is why this site can show methods without shipping every CSV.
+## 6. Limitations 
 
-## A minimal checklist
+This post summarises two sources: a university course that I studied and one HBS
+Online article. It does not review the entire scope on missing data or
+data quality, so the validity points above are practical based on experience rather than
+a literature-backed framework.
 
-| Step | Done when… |
-|------|------------|
-| Grain | You can finish the sentence “one row = …” |
-| Keys | Dupes and orphan IDs are counted |
-| Types | Dates are dates; categories are not floats |
-| Quality rules | Written down, not only in your head |
-| Output | A clean table or aggregate that answers the question |
+## Sources
 
-## What I’m watching next
-
-I’m collecting short notes when news stories lean on “the data shows…” claims —
-often the weak point is wrangling: wrong grain, silent missingness, or a chart
-built on an unstated filter. If you have a public dataset where cleaning changed
-the headline, I’d like to write that up next.
-
----
-
-*Related projects:* [E-Commerce Sales Report]({{ '/projects/ecommerce/' | relative_url }}),
-[Melbourne Pedestrian Traffic]({{ '/projects/melbourne-pedestrians/' | relative_url }}),
-[Broadway Box Office]({{ '/projects/broadway-box-office/' | relative_url }}).
+1. University course.
+2. Stobierski, T. (2021, updated 2023). [Data Wrangling: What It Is & Why
+   It's Important](https://online.hbs.edu/blog/post/data-wrangling). Harvard
+   Business School Online.
