@@ -55,7 +55,7 @@ Hands-on pattern mining, exploratory analysis, and visual dashboards. Every case
 {% endif %}
 
 {% if wip_projects.size > 0 %}
-<p class="archive__subtitle">In progress projects</p>
+<p class="archive__subtitle">In-progress Projects</p>
 <ul class="project-index">
   {% for project in wip_projects %}
     <li class="project-index__item">

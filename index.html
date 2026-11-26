@@ -2,6 +2,7 @@
 layout: splash
 title: "Mining Patterns & Uncovering Insights"
 permalink: /
+classes: home-decor
 header:
   overlay_color: "#1a2332"
 excerpt: "Extracting patterns from complex data, building interactive dashboards, and sharing key takeaways from what I learn."
@@ -12,7 +13,7 @@ excerpt: "Extracting patterns from complex data, building interactive dashboards
 {% assign ml_projects = complete_projects | where: "category", "ml" %}
 {% assign wip_projects = projects | where: "status", "in-progress" %}
 
-<p class="archive__subtitle">EDA / analysis projects</p>
+<p class="archive__subtitle">EDA / Analysis Projects</p>
 <ul class="taxonomy__index">
   {% for project in complete_projects %}
     {% unless project.category == "ml" %}
@@ -24,7 +25,7 @@ excerpt: "Extracting patterns from complex data, building interactive dashboards
 </ul>
 
 {% if ml_projects.size > 0 %}
-<p class="archive__subtitle">ML projects</p>
+<p class="archive__subtitle">Machine Learning Projects</p>
 <ul class="taxonomy__index">
   {% for project in ml_projects %}
     <li>
@@ -35,7 +36,7 @@ excerpt: "Extracting patterns from complex data, building interactive dashboards
 {% endif %}
 
 {% if wip_projects.size > 0 %}
-<p class="archive__subtitle">In progress projects</p>
+<p class="archive__subtitle">In-progress Projects</p>
 <ul class="taxonomy__index">
   {% for project in wip_projects %}
     <li>
@@ -49,9 +50,13 @@ excerpt: "Extracting patterns from complex data, building interactive dashboards
 
 <p class="archive__subtitle">Latest posts</p>
 
+<div class="home-posts">
 {% for post in site.posts limit:3 %}
-  <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-  <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+  <p class="home-posts__item">
+    <a href="{{ post.url | relative_url }}"><strong>{{ post.title }}</strong></a><br>
+    {{ post.excerpt | strip_html | truncate: 160 }}
+  </p>
 {% endfor %}
+</div>
 
 <p><a href="{{ '/posts/' | relative_url }}">Browse posts →</a></p>
