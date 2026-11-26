@@ -1,6 +1,6 @@
 ---
 title: "Broadway Box Office Dashboard"
-excerpt: "Shiny dashboard of weekly Broadway grosses (2005–2025), including the COVID collapse and recovery."
+excerpt: "RShiny dashboard of weekly Broadway grosses (2005–2025), including the COVID collapse and recovery."
 date: 2025-08-01
 status: complete
 category: dashboard
@@ -18,7 +18,7 @@ visual_image: /assets/images/projects/broadway.png
 {% if page.visual_image %}
 <figure class="project-visual">
   <img src="{{ page.visual_image | relative_url }}" alt="Broadway box office dashboard">
-  <figcaption class="project-visual__caption">Shiny dashboard — weekly snapshot, leaderboard, and trend explorer.</figcaption>
+  <figcaption class="project-visual__caption">RShiny dashboard — weekly snapshot, leaderboard, and trend explorer.</figcaption>
 </figure>
 {% else %}
 <p>Final product: RShiny app (<code>broadway_data/app.R</code>)</p>
@@ -27,8 +27,7 @@ visual_image: /assets/images/projects/broadway.png
 ## Problem & context
 
 Journalists and analysts need a fast way to see which Broadway shows lead the
-week, how full houses are running, and how the market moved over two decades —
-especially through the 2020 shutdown and recovery.
+week, how full houses are running, and how the market moved over two decades, especially through the 2020 shutdown and recovery.
 
 ## Data & methodology
 

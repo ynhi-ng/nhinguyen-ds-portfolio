@@ -1,6 +1,6 @@
 ---
 title: "NBA Players — Exploratory Analysis"
-excerpt: "Player and season-level NBA EDA with an HTML findings report for portfolio readers."
+excerpt: "Player and season-level NBA EDA with an HTML findings report."
 date: 2025-08-20
 status: complete
 category: eda
@@ -27,16 +27,13 @@ visual_image: "/assets/images/projects/nba-players.png"
 
 ## Problem & context
 
-What patterns appear in NBA player careers and season performance when we join
-biographical attributes with season-level stats?
+This project answers this question: What patterns appear in NBA player careers and season performance when joining biographical attributes with season-level stats?
 
 ## Data & methodology
 
-- Player and season tables explored in Jupyter (CSV kept local; see README for source notes)
+- Player and season tables
 - Preparation / overview, then analysis sections on performance patterns
-- Portfolio-facing HTML findings report with position-mix chart
+- HTML findings report with position-mix chart
 
 ## Limits & next steps
-
-- Notebook is heavy with inline figures; use `index.html` for sharing
 - Next: minute-filtered efficiency charts and era comparisons on the report

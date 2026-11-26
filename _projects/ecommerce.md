@@ -27,17 +27,16 @@ visual_image: "/assets/images/projects/ecommerce.png"
 
 ## Problem & context
 
-A UK gift retailer left a year of transaction logs. Who are the customers, which
-products drive revenue, and can we recommend related items from descriptions alone?
+A transaction logs from the UK gift retailer. This project answers these questions: Who are the customers, which products drive revenue, and can we recommend related items from descriptions alone?
+
 
 ## Data & methodology
 
-- UCI Online Retail (Dec 2010–Dec 2011); cleaned to ~391k line items — raw CSV kept local; see project README citation
-- K-means on RFM-style features for customer segments
+- UCI Online Retail (Dec 2010–Dec 2011)
+- Combine K-means and RFM framework for customer segments
 - TF-IDF + cosine similarity recommender on product text
 - Static interactive report powered by Chart.js (`index.html` + `data.js`)
 
 ## Limits & next steps
 
-- Single retailer and time window; segments may not transfer
-- Report is portfolio-ready; live personalization is out of scope
+- Single retailer and time window; segments may not present the entire country

@@ -1,6 +1,6 @@
 ---
 title: "Student Stress Analysis"
-excerpt: "Survey EDA plus a peer-recommendation prototype — transparent first-line support with a path to professional help."
+excerpt: "Student survey EDA and a peer-recommendation prototype — first-line support with a path to professional help."
 date: 2025-10-15
 status: complete
 category: dashboard
@@ -27,18 +27,18 @@ visual_image: "/assets/images/projects/student-stress.png"
 
 ## Problem & context
 
-What factors relate to students' reported mental stress levels, and how can we
-surface transparent, peer-based first-line coping ideas — with a clear path to
+This project explores: What factors relate to students' reported mental stress levels, and how can we
+surface transparent, peer-based first-line stress coping ideas,  with a clear path to
 professional help if someone is still struggling?
 
 ## Data & methodology
 
-- Survey tables kept local (see README); companion UK survey analyses
-- EDA, correlations, t-tests / ANOVA, association rules
-- Chart.js exploration dashboard + **recommendation prototype** that ranks
-  Social Support / Physical Activities / Meditation among similar-stress peers
+- UK student survey analyses
+- EDA, correlations, t-tests / ANOVA, Apriori association rules
+- Chart.js exploration dashboard + **recommendation prototype** ranking which option is more suitable
+- Social Support / Physical Activities / Meditation among similar-stress peers
 
 ## Limits & next steps
 
-- Self-reported survey data; rates are descriptive, not causal or clinical advice
-- Prototype uses simple cohort filters; next step could be richer similarity matching
+- Self-reported survey data; rates are descriptive, not clinical advice
+- Prototype uses simple cohort filters; next step could be similarity matching

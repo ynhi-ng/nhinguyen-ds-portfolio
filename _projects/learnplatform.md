@@ -27,16 +27,15 @@ visual_image: "/assets/images/projects/learnplatform.png"
 
 ## Problem & context
 
-How did digital learning engagement change through the 2020 COVID outbreak, which
-products led, and how does engagement relate to district demographics?
+This project answers these questions: How did digital learning engagement change through the 2020 COVID outbreak, which products led, and how does engagement relate to district demographics?
 
 ## Data & methodology
 
-- LearnPlatform / Kaggle digital-learning challenge data (kept local; see README)
+- LearnPlatform / Kaggle digital-learning challenge data
 - Weekday vs weekend; pre- vs post-outbreak; product leaders; demographic correlations
 - HTML findings report summarizing notebook conclusions
 
 ## Limits & next steps
 
-- Observational district aggregates; correlations ≠ causation
+- Observational district aggregated report only
 - Next: export more chart aggregates into interactive report panels
