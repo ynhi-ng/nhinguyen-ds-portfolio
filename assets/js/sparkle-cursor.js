@@ -10,15 +10,17 @@
   document.body.appendChild(layer);
 
   var last = 0;
+  var toggle = false;
   document.addEventListener(
     "mousemove",
     function (e) {
       var now = Date.now();
       if (now - last < 45) return;
       last = now;
+      toggle = !toggle;
 
       var spark = document.createElement("span");
-      spark.className = "sparkle";
+      spark.className = "sparkle " + (toggle ? "sparkle--pink" : "sparkle--white");
       spark.style.left = e.clientX + "px";
       spark.style.top = e.clientY + "px";
       var size = 4 + Math.random() * 5;
