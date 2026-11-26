@@ -13,7 +13,7 @@ Hands-on pattern mining, exploratory analysis, and visual dashboards. Every case
 {% assign ml_projects = complete_projects | where: "category", "ml" %}
 {% assign wip_projects = projects | where: "status", "in-progress" %}
 
-<p class="archive__subtitle">EDA / analysis projects</p>
+<p class="archive__subtitle">EDA / Analysis Projects</p>
 <ul class="project-index">
   {% for project in complete_projects %}
     {% unless project.category == "ml" %}
@@ -37,7 +37,7 @@ Hands-on pattern mining, exploratory analysis, and visual dashboards. Every case
 </ul>
 
 {% if ml_projects.size > 0 %}
-<p class="archive__subtitle">ML projects</p>
+<p class="archive__subtitle">Machine Learning Projects</p>
 <ul class="project-index">
   {% for project in ml_projects %}
     <li class="project-index__item">

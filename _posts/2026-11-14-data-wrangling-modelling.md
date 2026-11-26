@@ -73,9 +73,9 @@ A wrangling decision is only defensible if someone else can see it: keeping trac
 3. Count again, and record the rule, the counts and the reason.
 
 
-## 5. Threats to validity
+## 5. Challenges to validity
 
-Questions I ask before trusting a cleaned dataset: 
+Questions I ask before moving on with the analysis: 
 
 - **Selection:** did cleaning remove a non-random group of records?
 - **Measurement:** were units, formats and encodings same across sources?
